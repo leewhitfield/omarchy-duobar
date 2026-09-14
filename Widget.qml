@@ -71,10 +71,10 @@ Panel {
         id: button
         anchors.fill: parent
         bar: root.bar
-        opticalSize: 24
-        slotSize: 30
+        opticalSize: Style.bar.iconCanvas
+        slotSize: Style.bar.iconSlot
         tooltipText: "Battery " + root.batteryLabel + " · Wi-Fi " + root.wifiLabel + " · Bluetooth " + root.bluetoothLabel
-        iconComponent: Component { LiveGlyph {} }
+        iconComponent: Component { LiveGlyph { transform: Translate { y: 1 } } }
         onPressed: root.toggle()
     }
 
